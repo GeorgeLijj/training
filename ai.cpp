@@ -69,7 +69,7 @@ void Gamestart(){
 			break;	
 		}
 	}
-	if(turn>205){
+	if(turn>=102){
 		cout<<"godfall"<<endl;
 	}
 }
