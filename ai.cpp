@@ -1,7 +1,6 @@
 #include<iostream>
-#include<stdio.h>
-#include<stdlib.h>
-#include <time.h>
+#include<cstdio>
+#include<cstdlib>
 using namespace std;
 const int N=15;
 const int D=10;
@@ -70,7 +69,7 @@ void Gamestart(){
 		}
 	}
 	if(turn>=102){
-		cout<<"godfall"<<endl;
+		cout<<"draw"<<endl;
 	}
 }
 void InitialBoard() {
@@ -122,7 +121,7 @@ void Playerturn() {
 	}
 }
 void Computerturn() {
-	AlphaBeta(&root,0,-100000000,100000000) ;
+	AlphaBeta(&root,0,INT_MIN,INT_MAX) ;
 	RevBoard(OldBoard ,0,Board); 
 	Board[y][x]=computerp;
 }
