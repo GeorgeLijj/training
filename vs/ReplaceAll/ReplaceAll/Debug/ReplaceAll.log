@@ -1,0 +1,3 @@
+﻿  main.cpp
+d:\study\visualstudio\replaceall\replaceall\main.cpp(8): warning C4018: “<”: 有符号/无符号不匹配
+  ReplaceAll.vcxproj -> D:\Study\VisualStudio\ReplaceAll\Debug\ReplaceAll.exe
