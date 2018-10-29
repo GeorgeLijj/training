@@ -7,7 +7,7 @@ const StringType& StringType::operator=(StringType str) {
 		cerr << "out of capacity" << endl;
 		return *this;
 	}
-	for (int i = 0; i < len; i++) {
+	for (int i = 0; i<= len; i++) {
 		s[i] = str.s[i];
 	}
 	return *this;
@@ -18,8 +18,8 @@ StringType StringType::substr(int pos, int len) {
 	//	cerr << "illegal pos" << endl;
 	//}
 	int i = 0;
-	for (i = 0;i<len||i+pos<=length(); i++) {
-			tmps.s[0] = s[pos + i];
+	for (i = 0;i<len&&i+pos<=length(); i++) {
+			tmps.s[i] = s[pos + i];
 	}
 	tmps.s[i] = '\0';
 	return tmps;
@@ -39,6 +39,7 @@ StringType& StringType::insert(StringType& str, int pos) {
 	return *this;
 }
 StringType::StringType(int capacity, char* s) {
+	this->capacity = capacity;
 	this->s = new char[capacity];
 	if (s!=NULL) {
 		int i;
@@ -49,6 +50,7 @@ StringType::StringType(int capacity, char* s) {
 	}
 }
 StringType::StringType(int capacity) {
+	this->capacity = capacity;
 	s = new char[capacity];
 	s[0] = '\0';
 }
@@ -64,10 +66,10 @@ int StringType::getCapactiy() {
 StringType& StringType::reverse() {
 	char tmp;
 	int len = length();
-	for (int i = 0; i < len / 2; i++) {
+	for (int i = 0; i <= len / 2; i++) {
 		tmp = s[i];
-		s[i] = s[len - i];
-		s[len - i] = tmp;
+		s[i] = s[len - i-1];
+		s[len - i-1] = tmp;
 	}
 	return *this;
 }

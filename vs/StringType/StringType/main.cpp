@@ -6,17 +6,17 @@ int main() {
 	cout << s0 << endl;
 	StringType s1(50,s0);
 	cout << s1<< endl;
-	StringType s2(20);
+	StringType s2(40);
 	s2 = s1.substr(2, 6);
 	cout << s2<< endl;
-	s1.insert(s2, 19);
+	s1.insert(s2, 18);
 	cout << s1<< endl;
 	s1.erase(2, 6);
-	cout << s1<< endl;
+	cout <<s1<< endl;
 	s1.reverse();
-	cout << s1<< endl;
+	cout <<s1<< endl;
 	s1.clear();
-	cout << s1.empty()<< endl;
+	cout <<s1.empty()<< endl;
 	system("pause");
 
 }
