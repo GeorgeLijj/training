@@ -18,8 +18,12 @@ public class EngToNum {
             }
         }
         for(int i=0;i<20;i++){
-        if(EngString.unit[i].equals(unit)){
+            if(EngString.unit[i].equals(unit)){
                 number+=i;
+                break;
+            }
+            if(EngString.tens[i].equals(unit)){
+                number+=i*10;
                 break;
             }
         }
